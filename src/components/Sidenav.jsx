@@ -17,11 +17,11 @@ function Sidenav({children}){
 
     return <div className="flex">
 
-    <div style={{ width: isOpen === true ? "50px" : ""}} className=" transition-all fixed duration-500 overflow-hidden w-[180px] h-screen bg-[#FBFAF4] border-r-2 border-blue-500">
+    <div style={{ width: isOpen === true ? "50px" : ""}} className=" transition-all fixed duration-500 overflow-hidden w-[250px] h-screen bg-[#FBFAF4] border-r-2 border-blue-500">
         <i onClick={handleIsClose} style={{ display: isOpen === true ? "block": "none"}} class="fa-solid fa-bars ml-3 mt-2 hidden"></i>
-        <i onClick={handleIsOpen} class="fa-solid fa-xmark ml-[150px] text-2xl"></i>
+        <i onClick={handleIsOpen} class="fa-solid fa-xmark ml-[220px] text-3xl"></i>
        
-        <div style={{paddingLeft: isOpen === true ? "10px" : ""}}  className="flex flex-col gap-8 px-8 pt-10  ">
+        <div style={{paddingLeft: isOpen === true ? "10px" : ""}}  className="flex flex-col gap-12 px-8 pt-10 text-2xl transition-all duration-500 ">
             {
         isOpen === true ? <i class="fa-brands fa-microsoft"></i> :
         <NavLink to="/">  <i class="fa-brands fa-microsoft"></i> Dashboard  </NavLink>
@@ -46,7 +46,7 @@ function Sidenav({children}){
         </div>
     </div>
 
-    <div style={{marginLeft: isOpen === true ? "100px" : ""}} className="main ml-[220px] transition-all duration-500">
+    <div style={{marginLeft: isOpen === true ? "100px" : ""}} className="main ml-[270px] transition-all duration-500">
         {
             children
         }
